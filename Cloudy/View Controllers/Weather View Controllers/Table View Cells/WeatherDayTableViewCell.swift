@@ -30,5 +30,13 @@ class WeatherDayTableViewCell: UITableViewCell {
         // Configure Cell
         selectionStyle = .none
     }
+    
+    func configure(withViewModel viewModel: WeatherDayViewViewModel) {
+        dayLabel.text = viewModel.day
+        dateLabel.text = viewModel.date
+        windSpeedLabel.text = viewModel.windSpeed
+        temperatureLabel.text = viewModel.temperature
+        iconImageView.image = viewModel.image
+    }
 
 }
